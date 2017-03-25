@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>MultiStreamRecorder.js & MediaStreamRecorder</title>
+    <title>rajukumar</title>
 
     <script src="https://cdn.WebRTC-Experiment.com/MediaStreamRecorder.js"></script>
     
