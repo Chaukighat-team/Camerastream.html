@@ -166,30 +166,8 @@
             };
         </script>
 
-        <pre style="border-left: 2px solid red; margin-left:2em; padding-left: 1em;">
-// cdn.webrtc-experiment.com/MediaStreamRecorder.js
-var mediaConstraints = {
-    audio: true,
-    video: true
-};
-
-navigator.getUserMedia(mediaConstraints, onMediaSuccess, onMediaError);
-
-function onMediaSuccess(stream) {
-	var arrayOfStreams = [stream, stream, stream, stream];
-    var multiStreamRecorder = new MultiStreamRecorder(arrayOfStreams);
-    multiStreamRecorder.ondataavailable = function(blob) {
-        // URL.createObjectURL(blob)
-    };
-    multiStreamRecorder.start(3000);
-}
-
-function onMediaError(e) {
-    console.error('media error', e);
-}
-</pre>
-
-        <a href="https://www.webrtc-experiment.com/msr/" style="border-bottom: 1px solid red; color: red; font-size: 1.2em; position: absolute; right: 0; text-decoration: none; top: 0;">MediaStreamRecorder Demos</a>
+ 
+       <a href="https://www.webrtc-experiment.com/msr/" style="border-bottom: 1px solid red; color: red; font-size: 1.2em; position: absolute; right: 0; text-decoration: none; top: 0;">MediaStreamRecorder Demos</a>
 
         <section class="experiment own-widgets latest-commits">
             <h2 class="header" id="updates" style="color: red; padding-bottom: .1em;"><a href="https://github.com/streamproc/MediaStreamRecorder/commits/master" target="_blank">Latest Updates</a>
