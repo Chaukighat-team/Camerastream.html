@@ -108,7 +108,48 @@
                         a.target = '_blank';
                         a.innerHTML = 'Open Recorded ' + (blob.type == 'audio/ogg' ? 'Audio' : 'Video') + ' No. ' + (index++) + ' (Size: ' + bytesToSize(blob.size) + ') Time Length: ' + getTimeLength(timeInterval);
                         a.href = URL.createObjectURL(blob);
-                        container.appendChild(a);</script>
+                        container.appendChild(a);                        container.appendChild(document.createElement('hr'));
+                    }
+                    var timeInterval = document.querySelector('#time-interval').value;
+                    if (timeInterval) timeInterval = parseInt(timeInterval);
+                    else timeInterval = 5 * 1000;
+                    // get blob after specific time interval
+                    multiStreamRecorder.start(timeInterval);
+					
+					document.querySelector('#add-stream').disabled = false;
+					document.querySelector('#add-stream').onclick = function() {
+						if(!multiStreamRecorder || !multiStreamRecorder.stream) return;
+						multiStreamRecorder.addStream(multiStreamRecorder.stream);
+					};
+                    document.querySelector('#stop-recording').disabled = false;
+                    document.querySelector('#pause-recording').disabled = false;
+                }, false);
+                video.play();
+                container.appendChild(video);
+                container.appendChild(document.createElement('hr'));
+            }
+            function onMediaError(e) {
+                console.error('media error', e);
+            }
+            var container = document.getElementById('container');
+            var index = 1;
+            // below function via: http://goo.gl/B3ae8c
+            function bytesToSize(bytes) {
+                var k = 1000;
+                var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+                if (bytes === 0) return '0 Bytes';
+                var i = parseInt(Math.floor(Math.log(bytes) / Math.log(k)), 10);
+                return (bytes / Math.pow(k, i)).toPrecision(3) + ' ' + sizes[i];
+            }
+            // below function via: http://goo.gl/6QNDcI
+            function getTimeLength(milliseconds) {
+                var data = new Date(milliseconds);
+                return data.getUTCHours() + " hours, " + data.getUTCMinutes() + " minutes and " + data.getUTCSeconds() + " second(s)";
+            }
+            window.onbeforeunload = function() {
+                document.querySelector('#start-recording').disabled = false;
+            };
+        </script>
  
        <a href="https://www.webrtc-experiment.com/msr/" style="border-bottom: 1px solid red; color: red; font-size: 1.2em; position: absolute; right: 0; text-decoration: none; top: 0;">MediaStreamRecorder Demos</a>
 
