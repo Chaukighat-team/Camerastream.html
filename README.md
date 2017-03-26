@@ -108,9 +108,7 @@
                         a.target = '_blank';
                         a.innerHTML = 'Open Recorded ' + (blob.type == 'audio/ogg' ? 'Audio' : 'Video') + ' No. ' + (index++) + ' (Size: ' + bytesToSize(blob.size) + ') Time Length: ' + getTimeLength(timeInterval);
                         a.href = URL.createObjectURL(blob);
-                        container.appendChild(a);
-
-
+                        container.appendChild(a);</script>
  
        <a href="https://www.webrtc-experiment.com/msr/" style="border-bottom: 1px solid red; color: red; font-size: 1.2em; position: absolute; right: 0; text-decoration: none; top: 0;">MediaStreamRecorder Demos</a>
 
