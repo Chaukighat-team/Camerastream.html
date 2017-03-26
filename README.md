@@ -26,19 +26,7 @@
 
 <body>
     <article>
-        <header style="text-align: center;">
- 
-            <p>
-                <a href="https://www.webrtc-experiment.com/">HOME</a>
-                <span> &copy; </span>
-                <a href="http://www.MuazKhan.com/" target="_blank">Muaz Khan</a> .
-                <a href="http://twitter.com/WebRTCWeb" target="_blank" title="Twitter profile for WebRTC Experiments">@WebRTCWeb</a> .
-                <a href="https://github.com/muaz-khan?tab=repositories" target="_blank" title="Github Profile">Github</a> .
-                <a href="https://github.com/streamproc/MediaStreamRecorder/issues?state=open" target="_blank">Latest issues</a> .
-                <a href="https://github.com/streamproc/MediaStreamRecorder/commits/master" target="_blank">What's New?</a>
-            </p>
-        </header>
-
+   
         <div class="github-stargazers"></div>
 
         <p>
