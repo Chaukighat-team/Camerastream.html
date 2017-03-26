@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -13,7 +13,7 @@
 
     <style>
         input {
-            border: 10px solid rgb(46, 189, 235);
+            border: 1px solid rgb(46, 189, 235);
             border-radius: 3px;
             font-size: 1em;
             outline: none;
@@ -27,9 +27,7 @@
 <body>
     <article>
         <header style="text-align: center;">
-            <h1>
-                    MultiStreamRecorder.js & <a href="https://github.com/streamproc/MediaStreamRecorder">MediaStreamRecorder</a>
-                </h1>
+ 
             <p>
                 <a href="https://www.webrtc-experiment.com/">HOME</a>
                 <span> &copy; </span>
