@@ -203,12 +203,6 @@
 
     <a href="https://github.com/streamproc/MediaStreamRecorder" class="fork-left"></a>
 
-    <footer>
-        <p>
-            <a href="https://www.webrtc-experiment.com/">WebRTC Experiments</a> © <a href="https://plus.google.com/+MuazKhan" rel="author" target="_blank">Muaz Khan</a>
-            <a href="mailto:muazkh@gmail.com" target="_blank">muazkh@gmail.com</a>
-        </p>
-    </footer>
 </body>
 
 </html>
